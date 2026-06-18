@@ -80,6 +80,7 @@
                 <option value="edge">Edge（微软语音）</option>
                 <option value="minimax">MiniMax（T2A v2）</option>
                 <option value="nimo">MiMo-V2.5-TTS（小米）</option>
+                <option value="local">本地 TTS (TTS Server)</option>
             </select>
         </div>
         <div class="st-is-field">
@@ -89,7 +90,24 @@
                 <option value="minimax">MiniMax（T2A v2）</option>
                 <option value="edge">Edge（微软语音）</option>
                 <option value="nimo">MiMo-V2.5-TTS（小米）</option>
+                <option value="local">本地 TTS (TTS Server)</option>
             </select>
+        </div>
+        <div id="local_tts_settings" style="display: none;">
+       <label for="local_tts_baseUrl">TTS Server 地址:</label>
+       <input type="text" id="local_tts_baseUrl" placeholder="http://127.0.0.1:753">
+       <br>
+       <label for="local_tts_voice">语音名称:</label>
+       <input type="text" id="local_tts_voice" placeholder="可选">
+       <br>
+       <label for="local_tts_token">Token（可选）:</label>
+       <input type="text" id="local_tts_token" placeholder="可选">
+       <br>
+       <label for="local_tts_format">音频格式:</label>
+       <select id="local_tts_format">
+           <option value="wav">WAV</option>
+           <option value="mp3">MP3</option>
+       </select>
         </div>
         <div class="st-is-field">
             <label for="nimoCloneStorage" title="选择"酒馆"后，MiMo 复刻音频将通过 /api/images/upload 存储到服务端，可跨浏览器/设备使用；选择"浏览器"则存到本地 IndexedDB（默认）。">MiMo 复刻音频存储位置</label>
